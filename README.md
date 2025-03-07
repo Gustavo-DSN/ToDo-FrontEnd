@@ -33,7 +33,7 @@ Este é o repositório do front-end de uma aplicação simples de To-Do List, de
 
 4. Inicie a aplicação:
    ```sh
-   npm start
+   npm run dev
    ```
 
 A aplicação será executada em `http://localhost:3000/` por padrão.
