@@ -1,12 +1,61 @@
-# React + Vite
+# To-Do List - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do front-end de uma aplicação simples de To-Do List, desenvolvida em React com Material UI para a interface.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
+- React.js
+- Material UI
+- Axios (para chamadas ao back-end)
+- React Router (para navegação, se aplicável)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
+- Adicionar tarefas
+- Listar tarefas
+- Editar tarefas
+- Excluir tarefas
 
-## Expanding the ESLint configuration
+## Instalação e Execução
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/Gustavo-DSN/todo-list-front.git
+   ```
+
+2. Acesse o diretório do projeto:
+   ```sh
+   cd todo-list-front
+   ```
+
+3. Instale as dependências:
+   ```sh
+   npm install
+   ```
+
+4. Inicie a aplicação:
+   ```sh
+   npm start
+   ```
+
+A aplicação será executada em `http://localhost:3000/` por padrão.
+
+## Configuração do Back-End
+Para que a aplicação funcione corretamente, o back-end também precisa estar rodando. Certifique-se de seguir as instruções do repositório do back-end para configurá-lo corretamente.
+
+## Contribuição
+Se desejar contribuir com melhorias, siga os seguintes passos:
+1. Fork o repositório
+2. Crie uma branch para a nova feature:
+   ```sh
+   git checkout -b minha-feature
+   ```
+3. Faça as alterações e commit:
+   ```sh
+   git commit -m "Adiciona nova funcionalidade"
+   ```
+4. Envie as alterações:
+   ```sh
+   git push origin minha-feature
+   ```
+5. Abra um Pull Request.
+
+
