@@ -8,9 +8,9 @@ import {
 	ListItemText,
 	IconButton,
 	Checkbox,
-	Container,
 	Typography,
 	Paper,
+	Box,
 } from "@mui/material";
 import { Delete as DeleteIcon } from "@mui/icons-material";
 
@@ -46,11 +46,33 @@ export default function TaskList() {
 	};
 
 	return (
-		<Container maxWidth="sm">
-			<Paper elevation={3} style={{ padding: "20px", marginTop: "20px" }}>
-				<Typography variant="h4" align="center" gutterBottom>
-					Lista de tarefas
+		<Box
+			sx={{
+				height: "100vh",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				background: "linear-gradient(135deg, #667eea, #764ba2)",
+				padding: 2,
+			}}
+		>
+			<Paper
+				elevation={6}
+				sx={{
+					width: "100%",
+					maxWidth: "450px",
+					padding: "24px",
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					borderRadius: "12px",
+					backgroundColor: "#fff",
+				}}
+			>
+				<Typography variant="h4" color="primary" gutterBottom>
+					Lista de Tarefas
 				</Typography>
+
 				<TextField
 					fullWidth
 					label="Nova tarefa"
@@ -58,18 +80,20 @@ export default function TaskList() {
 					value={newTask}
 					onChange={(e) => setNewTask(e.target.value)}
 					onKeyPress={(e) => e.key === "Enter" && handleAddTask()}
+					sx={{ marginBottom: 2 }}
 				/>
+
 				<Button
 					fullWidth
 					variant="contained"
 					color="primary"
 					onClick={handleAddTask}
-					style={{ marginTop: "10px" }}
+					sx={{ marginBottom: 2 }}
 				>
 					Adicionar
 				</Button>
 
-				<List>
+				<List sx={{ width: "100%" }}>
 					{tasks.map((task) => (
 						<ListItem key={task._id} divider>
 							<Checkbox
@@ -78,14 +102,13 @@ export default function TaskList() {
 							/>
 							<ListItemText
 								primary={task.title}
-								style={{
+								sx={{
 									textDecoration: task.completed
 										? "line-through"
 										: "none",
 								}}
 							/>
 							<IconButton
-								edge="end"
 								color="error"
 								onClick={() => handleDeleteTask(task._id)}
 							>
@@ -95,6 +118,6 @@ export default function TaskList() {
 					))}
 				</List>
 			</Paper>
-		</Container>
+		</Box>
 	);
 }

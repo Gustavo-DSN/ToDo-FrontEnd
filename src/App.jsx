@@ -1,4 +1,4 @@
-import TaskList from "./components/TaskList";
+import TaskList from "./Pages/TaskList";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 const theme = createTheme({
