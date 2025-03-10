@@ -1,5 +1,5 @@
 // src/services/api.js
-const API_URL = "http://localhost:8080/api/tasks";
+const API_URL = "https://todo-backend-q28y.onrender.com/api/tasks";
 
 export async function getTasks() {
 	const response = await fetch(API_URL);
